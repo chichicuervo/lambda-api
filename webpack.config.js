@@ -5,11 +5,14 @@ const TerserPlugin = require('terser-webpack-plugin')
 module.exports = {
     target: "node",
     mode: "production",
-	entry: './lib/index.js',
+	entry: {
+        index: './api/index.js',
+        hooks: './hooks/index.js',
+    },
 	output: {
 		path: path.resolve( __dirname, 'dist' ),
-		filename: 'index.js',
-		library: '@jbelich/lambda-api',
+		filename: '[name].js',
+		library: [ '@jbelich', 'lambda-api', "[name]" ],
 		libraryTarget: 'umd',
 	},
     optimization: {
@@ -21,4 +24,16 @@ module.exports = {
         ]
     },
     externals: [ nodeExternals() ],
+    module: {
+		rules: [ {
+			test: /\.(mjs|jsx?)$/,
+			exclude: /node_modules/,
+			use: {
+				loader: 'babel-loader',
+				options: {
+					cacheDirectory: true,
+				}
+			}
+        } ]
+	}
 };
