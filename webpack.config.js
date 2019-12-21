@@ -9,7 +9,7 @@ module.exports = {
 	output: {
 		path: path.resolve( __dirname, 'dist' ),
 		filename: 'index.js',
-		library: '@jbelich/lambdaApi',
+		library: '@jbelich/lambda-api',
 		libraryTarget: 'umd',
 	},
     optimization: {
