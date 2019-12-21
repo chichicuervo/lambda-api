@@ -1,30 +1,31 @@
 {
-  "name": "@jbelich/lambda-api",
-  "version": "0.0.1",
-  "description": "Class-based API adjunct for jeremeydaily's lambda-api",
-  "private": true,
-  "sideEffects": false,
-  "main": "dist/index.js",
-  "module": "lib/index.js",
-  "files": [
-    "LICENSE",
-    "README.md",
-    "lib/",
-    "dist/"
-  ],
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
-  },
-  "author": "Jason Belich <jason@belich.com>",
-  "license": "UNLICENSED",
-  "devDependencies": {
-    "terser-webpack-plugin": "^2.3.1",
-    "webpack": "^4.41.4",
-    "webpack-cli": "^3.3.10",
-    "webpack-node-externals": "^1.7.2"
-  },
-  "dependencies": {
-    "lambda-api": "^0.10.4"
-  }
+    "name": "@jbelich/lambda-api",
+    "version": "0.0.1",
+    "description": "Class-based API adjunct for jeremeydaily's lambda-api",
+    "private": true,
+    "sideEffects": false,
+    "main": "dist/index.js",
+    "module": "lib/index.js",
+    "files": [
+        "LICENSE",
+        "README.md",
+        "lib/",
+        "dist/"
+    ],
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "webpack"
+    },
+    "author": "Jason Belich <jason@belich.com>",
+    "license": "MIT",
+    "devDependencies": {
+        "terser-webpack-plugin": "^2.3.1",
+        "webpack": "^4.41.4",
+        "webpack-cli": "^3.3.10",
+        "webpack-node-externals": "^1.7.2"
+    },
+    "dependencies": {
+        "lambda-api": "^0.10.4"
+    },
+    "repository": "github:chichicuervo/lambda-api"
 }
